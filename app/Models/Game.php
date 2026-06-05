@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    protected $fillable = ['name', 'description', 'category_id'];
+    protected $fillable = ['name', 'description', 'category_id', 'image_path'];
 
     public function users()
     {
@@ -14,7 +14,8 @@ class Game extends Model
             User::class,
             'user_libraries',
             'game_id',
-            'user_id'
+            'user_id',
+            'image_path'
         );
     }
 
